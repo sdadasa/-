@@ -1,0 +1,77 @@
+#header{
+    background: midnightblue;color: white;
+    font-size: 50px;
+    line-height: 200px;
+    height:200px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+ }
+ #kafei{
+     width: 40px;
+ }
+ #daohan{
+     background:#69c0ff; 
+     width: 20%;
+     height: 2500px;
+     vertical-align: top;
+     display: inline-block;
+     
+ }
+ #secondtable{
+     width: 1600px;text-align: center;
+ }
+ #neirong{
+     width: 75%;
+    display: inline-block;
+ }
+ #drink{
+    display: inline-block;
+    padding-bottom: 15px;
+    width: 1600px;
+    text-align: center;
+ }
+ #price{
+     text-align: center
+ }
+ #price td:before{
+    content: '￥';}
+ #txt{
+     display: inline-block;
+ }
+ #picture{
+     width: 500px;
+ }
+ #last{
+     width: 100%;
+ }
+
+ li a {
+     display: block;
+     color: #000;
+     padding: 8px 16px;
+     text-decoration: none;
+ }
+ li a:hover {
+     background-color: #555;
+     color: white;
+ }
+ li {
+     text-align: center;
+     border-bottom: 1px solid #555;
+ }
+ li:last-child {
+     border-bottom: none;
+ }
+ h5:first-letter{
+    font-size: 32px;
+}li a:active {
+    background-color:#d4380d;
+    
+}#indent{
+    text-indent:50px;
+}
+ul{
+    position: fixed;
+    width: 20%;
+}

@@ -1,5 +1,5 @@
 #header{
-   width: 2000px;height:200px ;background: #1890ff;text-align: center;color: white;font-size: 50px;
+   width: 2500px;height:200px ;background: #1890ff;text-align: center;color: white;font-size: 50px;
 }
 #kafei{
     width: 80px;
@@ -8,7 +8,7 @@
 #daohan{
     vertical-align:top;background:#69c0ff;
     
-    width: 25%;
+    width:25%;
    
 }
 #daohantype{
@@ -24,7 +24,10 @@
     width: 75%;text-align: center;
 }
 #drink{
-    width: 75%;text-align: center;
+    width: 75%;margin: 0 auto;
+}
+#drink img{
+    display: block;margin: 0 auto;
 }
 #price{
     text-align: center
