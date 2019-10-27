@@ -4,41 +4,55 @@
     line-height: 200px;
     height:200px;
     text-align: center;
-    position: sticky;
-    top: 0;
+  display: block;
+ }
+ body{
+     width: 2000px;
  }
  #kafei{
-     width: 40px;
+  
+    width: 40px;
+ }
+ 
+.content{
+     width: 100%;
+     background-color:#eee;
+     
+  
  }
  #daohan{
-     background:#69c0ff; 
-     width: 20%;
-     height: 2500px;
-     vertical-align: top;
-     display: inline-block;
-     
+    width: 25%;
+    float: left;
+    position: sticky;
+    top:0;
+    
+    
  }
+ 
  #secondtable{
      width: 1600px;text-align: center;
  }
  #neirong{
      width: 75%;
-    display: inline-block;
+     display: inline-block;
  }
  #drink{
-    display: inline-block;
-    padding-bottom: 15px;
-    width: 1600px;
-    text-align: center;
+   float: left;
+    width: 75%;
+    background-color: #fff;
+    position: sticky;
+    top:0;
+ }
+ .tit{
+     display: block;
+     margin: 0 auto;
  }
  #price{
      text-align: center
  }
  #price td:before{
     content: '￥';}
- #txt{
-     display: inline-block;
- }
+ 
  #picture{
      width: 500px;
  }
@@ -53,7 +67,7 @@
      text-decoration: none;
  }
  li a:hover {
-     background-color: #555;
+     background-color:blue;
      color: white;
  }
  li {
@@ -71,7 +85,7 @@
 }#indent{
     text-indent:50px;
 }
-ul{
-    position: fixed;
-    width: 20%;
+
+.clear{
+    clear: both;
 }
