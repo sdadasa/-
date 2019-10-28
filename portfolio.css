@@ -44,7 +44,7 @@ p{   margin: 0 auto;
 div.img
 {
   
-  margin:0.6%;
+  margin:4px;
   border:2px solid #ffd591;
   
   float:left;
@@ -77,7 +77,7 @@ div.img a:hover img{
 div.desc
 {
   text-align:center;
-  margin:1%;
+  margin:1px;
 }
 
 .clear:after {
