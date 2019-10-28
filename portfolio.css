@@ -46,11 +46,11 @@ div.img
   
   margin:2px;
   border:2px solid #ffd591;
-  height:auto;
-  width:auto;
+  
   float:left;
   text-align:center;
   background:#ffe7ba ;
+  width: 24%;
 }
 
 div.img img
@@ -58,13 +58,18 @@ div.img img
   display:inline;
   margin:10px;
   
-opacity:1.0;
-filter:alpha(opacity=100);
+
 }
 
-div.img a:hover img{border:3px solid red;
-    opacity:0.4;
-filter:alpha(opacity=40);
+div.img a:hover img{
+    
+    opacity:0.8;
+
+   }
+   div.img:hover{
+    border:2px solid red;
+    
+
    }
 
 div.desc
@@ -78,8 +83,12 @@ div.desc
     display: table;
     clear: both;
 }
+#divsecond{
+    width: 60%;
+}
 #geshi{
-   padding-left: 400px;
+   width: 100%;
+    text-align: center;
 }
 #groud2{
     background: #a8071a;
