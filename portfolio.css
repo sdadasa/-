@@ -44,7 +44,7 @@ p{   margin: 0 auto;
 div.img
 {
   
-  margin:4px;
+  margin:1px;
   border:2px solid #ffd591;
   
   float:left;
@@ -56,7 +56,7 @@ div.img
 div.img img
 {
   display:inline;
-  margin:5px;
+  margin:2px;
 
 }
 
@@ -71,7 +71,7 @@ div.img a:hover img{
 
    }
    div.img a{
-       width: 100%;
+      
    }
 
 div.desc
