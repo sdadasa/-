@@ -44,20 +44,19 @@ p{   margin: 0 auto;
 div.img
 {
   
-  margin:2px;
+  margin:0.6%;
   border:2px solid #ffd591;
   
   float:left;
   text-align:center;
   background:#ffe7ba ;
-  width: 24%;
+  
 }
 
 div.img img
 {
   display:inline;
-  margin:10px;
-  
+  margin:5px;
 
 }
 
@@ -71,11 +70,14 @@ div.img a:hover img{
     
 
    }
+   div.img a{
+       width: 100%;
+   }
 
 div.desc
 {
   text-align:center;
-  margin:2px;
+  margin:1%;
 }
 
 .clear:after {
@@ -83,11 +85,9 @@ div.desc
     display: table;
     clear: both;
 }
-#divsecond{
-    width: 60%;
-}
+
 #geshi{
-   width: 100%;
+  
     text-align: center;
 }
 #groud2{
@@ -97,7 +97,7 @@ div.desc
 h4{
      
     text-align: center;
-    line-height: 200px;
+    line-height: 300px;
     height: 300px;
     color:white;
 }
@@ -121,5 +121,10 @@ h5.two{  text-align: center;
     height: 50px;
 }
 
-    
+    #chengkai{
+        overflow: hidden;
+        width: 60%;
+        margin: 0 auto;
+        
+    }
  
