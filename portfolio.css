@@ -46,7 +46,7 @@ div.img
   
   margin:1px;
   border:2px solid #ffd591;
-  
+  width: 20%;
   float:left;
   text-align:center;
   background:#ffe7ba ;
@@ -55,9 +55,9 @@ div.img
 
 div.img img
 {
-  display:inline;
+  
   margin:2px;
-
+  width:80%;
 }
 
 div.img a:hover img{
@@ -71,6 +71,7 @@ div.img a:hover img{
 
    }
    div.img a{
+      
       
    }
 
