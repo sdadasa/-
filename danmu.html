@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        .danger {
+            color: red;
+        }
+
+        #geshi {
+            border: 1px solid black;
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .yangshi{
+          text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="geshi">
+
+    </div>
+    <div class="yangshi">
+        <input type="text" id="names">
+    </div>
+    <div class="yangshi">
+        <button id="sent">发射</button>
+        <button id="clear">清屏</button>
+    </div>
+    <script>
+        $('document').ready(function () {
+
+            $('#sent').click(function () {
+                var span = $('<span></span>');
+                var r = parseInt(Math.random() * 256);
+                var b = parseInt(Math.random() * 256);
+                var g = parseInt(Math.random() * 256);
+                var color = "rgb(" + r + "," + b + "," + g + ")";
+                var top = parseInt(Math.random() * 256);
+
+                top = top < 0 ? 0 : top;
+                top = top + "px";
+                size = parseInt(Math.random() * 100);
+                size = size + "px";
+                span.css('position', 'absolute').css('top', top).css('color', color).css('right', '0px').css('font-size', size);
+
+                var x = parseInt(Math.random() * 15000);
+                if(x<5000){
+                    x=x+5000;
+                }
+                var p = $('#names').val();
+
+                span.html(p);
+
+                $('#geshi').append(span);
+                $(span).animate({ right: "+=100%" }, x);
+
+            });
+            var input = document.getElementById("names");
+            input.addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("sent").click();
+                }
+            });
+        })
+        $('#clear').click(function () {
+
+            $('#geshi').empty();
+        })
+
+        
+
+    </script>
+</body>
+
+</html>
