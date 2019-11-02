@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+    <title>樱花动漫</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+    <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fyPGmbYWvARv1sHGCcxo2cRiXj4Nah6x"></script>
+    <style>
+            img.youyi{
+                float: left;
+                padding-left: 70px;
+                
+              }
+              #header{
+                display: inline-block;
+               
+                width: 1200px;
+                
+                
+             }</style>
+  </head>
+  
+  <body>
+        <div style="text-align: center;" >
+                <div id="header">   
+                  <img class="youyi" src="images\yinghua2.png">
+                  <ul  style="float: right;
+                  list-style-type: none;
+                  margin-top:30px;
+                  padding-right: 70px;
+                  letter-spacing: 4px;">
+                     <li style=" display: inline-block;"><a href="qiyezhan.html">首页</a></li>
+                     <li style=" display: inline-block;"><a href="news.html">新闻</a></li>
+                     <li style=" display: inline-block;"><a href="#">关于我们</a></li>
+                   </ul>
+                     <h2 style="float: left;">樱花动漫</h2>
+                     
+                     
+                
+                 </div>
+                 <div style="text-align: center;"><h1>关于我们</h1></div>
+               </div>
+    <!--百度地图容器-->
+    
+        <div style="float: right;width: 60%;">
+            <h3>樱花动漫拥有上万集高清晰画质的在线动漫,观看完全免费、无须注册、高速播放、更新及时的专业在线樱花动漫站,我们致力为所有动漫迷们提供最好看的动漫。</h3>
+            <div style="margin-top: 5%;">
+                    <img  style="float: left;" src="images\weizhi.png"> 
+                    <h4 style="padding-top: 2%;">福州市闽侯上街闽江</h4>
+                    <div style="clear: both;"></div>
+            </div>
+            <div style="margin-top: 5%;">
+                    <img  style="float: left;" src="images\youjian.png"> 
+                    <h4 style="padding-top: 2%;">1140318653@qq.com</h4>
+                    <div style="clear: both;"></div>
+            </div>
+            <div style="margin-top: 5%;">
+                    <img  style="float: left;" src="images\zixun.png"> 
+                    <h4 style="padding-top: 2%;">xxxxxxx</h4>
+                    <div style="clear: both;"></div>
+            </div>
+        </div>
+    
+    <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+    
+    <p style="color:red;font-weight:600">地图生成工具基于百度地图JS api v2.0版本开发，使用请申请密匙。
+      <a href="http://developer.baidu.com/map/index.php?title=jspopular/guide/introduction" style="color:#2f83c7" target="_blank">了解如何申请密匙</a>
+      <a href="http://lbsyun.baidu.com/apiconsole/key?application=key" style="color:#2f83c7" target="_blank">申请密匙</a>
+    </p>
+
+    <div style="width: 100%;text-align: center;background: #d9d9d9;">
+            <div style="display: inline-block;padding-right: 10%;padding-top: 10%;padding-bottom: 10%;">
+              <img src="images\weizhi.png">  
+              <p>福州市闽侯上街闽江</p>          
+            </div>
+            <div style="display: inline-block;padding-right: 10%;padding-top: 10%;padding-bottom: 10%;">             
+               <img src="images\youjian.png">
+               <p>1140318653@qq.com</p>
+             </div>
+             <div style="display: inline-block;padding-right: 10%;">             
+                 <img src="images\zixun.png">
+                 <p>xxxxxxx</p>
+               </div>
+               <div style="display: inline-block;">
+                 <img src="images\erweima.png">
+               </div>
+               <div style="width: 20%;border-bottom-color: black;border-bottom-style:solid;margin: 0 auto;">
+                <p ></p>
+      
+               </div>
+               <div style="padding-bottom: 3%;">
+                 <h5>版本所有©xxxxx</h5>
+               </div>
+      
+         </div>
+  </body>
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){ 
+      map = new BMap.Map("map"); 
+      map.centerAndZoom(new BMap.Point(119.17429,26.069821),18);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableKeyboard();
+      map.enableDragging();
+      map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"我的备注",title:"我的标记",imageOffset: {width:0,height:3},position:{lat:26.069561,lng:119.172817}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+</html>

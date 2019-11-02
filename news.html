@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>樱花动漫</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/axios/0.19.0/axios.min.js"></script>
+  
+
+</head>
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+  }
+  
+  
+  .content{
+      margin-top: 30px;
+      width: 1200px;
+      margin: 0 auto;
+  }
+  .page{
+      text-align: center;
+  }
+  .thumbnail span{
+      text-align: right;
+  }
+  .thumbnail img{
+      height: 400px;
+  }
+  
+  
+  .header {
+    width: 100%;
+    height: 80px;
+    background-color: #eee;
+    line-height: 80px;
+    font-size: 18px;
+
+  }
+
+  .header img {
+    vertical-align: middle;
+    padding-right: 10px;
+  }
+
+  .tit {
+    position: relative;
+
+  }
+
+  .nav {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    list-style: none;
+
+  }
+
+  .nav li {
+    float: left;
+    padding-left: 10px;
+    line-height: 40px;
+  }
+
+  .nav li a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .nav li a:hover {
+    color: blue;
+  }
+
+  .footer {
+    background-color: #ccc;
+  }
+
+  .contact {
+    padding-top: 40px;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .con {
+    flex: 1;
+    text-align: center;
+  }
+
+  .con img {
+    margin-bottom: 15px;
+  }
+
+  .s {
+    padding-top: 20px;
+  }
+
+  .l img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .bq {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid rgb(189, 187, 187);
+    padding: 50px;
+  }
+  
+  
+  img.youyi{
+    float: left;
+    padding-left: 70px;
+    
+  }
+  #header{
+    display: inline-block;
+   
+    width: 1200px;
+    
+    
+ }
+</style>
+
+<body>
+  <!-- header -->
+  <div style="text-align: center;" >
+      <div id="header">   
+        <img class="youyi" src="images\yinghua2.png">
+        <ul  style="float: right;
+        list-style-type: none;
+        margin-top:30px;
+        padding-right: 70px;
+        letter-spacing: 4px;">
+           <li style=" display: inline-block;"><a href="qiyezhan.html">首页</a></li>
+           <li style=" display: inline-block;"><a href="#">新闻</a></li>
+           <li style=" display: inline-block;"><a href="ditu.html">关于我们</a></li>
+         </ul>
+           <h2 style="float: left;">樱花动漫</h2>
+           
+           
+      
+       </div>
+     </div>
+  <!-- content -->
+  <div class="content ">
+    <div class="news">
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="" alt="">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <span>sss</span>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- page -->
+  <div class="page">
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li>
+          <a href="javascript:;" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li><a href="javascript:;">1</a></li>
+        <li><a href="javascript:;">2</a></li>
+        <li><a href="javascript:;">3</a></li>
+        <li><a href="javascript:;">4</a></li>
+        <li><a href="javascript:;">5</a></li>
+        <li>
+          <a href="javascript:;" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- footer-->
+  
+  <div style="width: 100%;text-align: center;background: #d9d9d9;">
+      <div style="display: inline-block;padding-right: 10%;padding-top: 10%;padding-bottom: 10%;">
+        <img src="images\weizhi.png">  
+        <p>福州市闽侯上街闽江</p>          
+      </div>
+      <div style="display: inline-block;padding-right: 10%;padding-top: 10%;padding-bottom: 10%;">             
+         <img src="images\youjian.png">
+         <p>1140318653@qq.com</p>
+       </div>
+       <div style="display: inline-block;padding-right: 10%;">             
+           <img src="images\zixun.png">
+           <p>xxxxxxx</p>
+         </div>
+         <div style="display: inline-block;">
+           <img src="images\erweima.png">
+         </div>
+         <div style="width: 20%;border-bottom-color: black;border-bottom-style:solid;margin: 0 auto;">
+          <p ></p>
+
+         </div>
+         <div style="padding-bottom: 3%;">
+           <h5>版本所有©xxxxx</h5>
+         </div>
+
+   </div>
+
+  <script>
+    axios.get('https://lingqule.papamk.com/wp-json/w2w/v1/products')
+      .then(function (res) {
+        var a = res.data;
+        console.log(a);
+
+        $.each(a, function (i, ele) {
+
+          $('.row .thumbnail').eq(i).find('img').prop('src', ele.images[0].src)
+          $('.row .thumbnail').eq(i).find('h3').html(ele.name)
+          $('.row .thumbnail').eq(i).find('p').html(ele.short_description_html)
+          $('.row .thumbnail').eq(i).find('span').html(ele.date_created)
+          $('.row .thumbnail').eq(i).click(function () {
+            window.location.href = "news-detail.html?" + "id=" + ele.id;
+          })
+
+        })
+
+        $('.thumbnail').mouseover(function () {
+          $(this).css('opacity', 0.7);
+          $(this).css('border-color', 'skyblue');
+          $(this).css('cursor', 'pointer');
+
+        })
+        $('.thumbnail').mouseout(function () {
+          $(this).css('opacity', "");
+          $(this).css('border-color', '')
+        })
+
+
+      }).catch(function (res) {
+        console.log('error', res);
+
+      })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.w{
+    width: 1200px;
+    margin: 0 auto;
+}
+.content h2{
+    text-align: center;
+}
+.imgg{
+    display: block;
+    text-align: center;
+    margin: 30px;
+}
+.content p {
+     text-align: center;
+}

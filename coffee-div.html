@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="coffee-div.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <style>
     * {
@@ -25,7 +26,7 @@
        <div class="content">
 
         <div id="daohan">
-           
+           <div id="list">
                <ul>
                 <li><a href="#yinpin1">拿铁</a></li>
                 <li><a href="#yinpin2">卡布奇诺</a></li>
@@ -35,11 +36,12 @@
             </ul>
         
     </div>
+</div>
         
             <div id="drink">
-                <img class="tit" src="images\4.png">
+               <div> <img class="tit" src="images\4.png"></div>
         
-                <table border="1" style="border-collapse:collapse;width: 800px;margin: 0 auto;">
+                <table border="1" style="border-collapse:collapse;width: 80%;border:1px  solid black;margin: 0 auto;">
                 <tr>
                     <th>饮品</th>
                     <th>拿铁</th>
@@ -58,7 +60,7 @@
                 </tr>
                 </table>
             
-            <div >
+            
             <img  src="images\natie.jpg">
             <p id="yinpin1">拿铁</P>
             <h5 id="indent"> “拿铁是意大利文“Latte”的音译，拿铁咖啡拿铁咖啡(6张)
@@ -88,15 +90,26 @@
             <h5 id="indent">焦糖玛奇朵（英文：Caramel
                 Macchiato）是在香浓热牛奶上加入浓缩咖啡、香草，再淋上纯正焦糖而制成的饮品，融合三种不同口味。Macchiato意大利文，意思是“烙印”和“印染”，中文音译“玛奇朵”。“Caramel”意思是焦糖。焦糖玛琪朵，寓意“甜蜜的印记”。
             </h5>
-            
-                
-            </div>
-           
+                         
+                 
     </div>
     <div class="clear"></div>
 </div>
     <div>
         <img id="last" src="images\banquan.jpg">
     </div>
+    <script>
+       $(document).scroll(function(){
+                   var scrollTop=$(window).scrollTop();
+                   var header=$('header').height();
+                   if(scrollTop>header){
+                       $('#list ul').css('position','fixed').css('width','25%');
+                   }
+                   else{
+                       $('#list ul').css('position',"").css('width','100%');
+       }
+       console.log('event',scrollTop,header);
+       })
+    </script>
 </body>
 </html>

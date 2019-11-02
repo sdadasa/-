@@ -23,29 +23,30 @@
  #daohan{
     width: 25%;
     float: left;
-    position: sticky;
-    top:0;
-    
-    
+    vertical-align: top;
+    top: 0;
+   
  }
  
  #secondtable{
      width: 1600px;text-align: center;
  }
  #neirong{
-     width: 75%;
-     display: inline-block;
+     float: right;
+     width: 70%;
+     
  }
  #drink{
-   float: left;
-    width: 75%;
+      float: right;
+   width: 75%;
     background-color: #fff;
-    position: sticky;
-    top:0;
+    
  }
  .tit{
      display: block;
      margin: 0 auto;
+     padding-top: 10px;
+     padding-bottom: 10px;
  }
  #price{
      text-align: center
@@ -88,4 +89,11 @@
 
 .clear{
     clear: both;
+}
+#list{
+   
+}
+#list ul{
+
+    top:0px;
 }
